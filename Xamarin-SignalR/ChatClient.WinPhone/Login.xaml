@@ -1,0 +1,39 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ChatClient.WinPhone.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="CodeTree" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Meetup Chat" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Button Content="Login" x:Name="btnLogin" HorizontalAlignment="Left" Margin="164,448,0,0" VerticalAlignment="Top" Click="btnLogin_Click"/>
+            <Image HorizontalAlignment="Left" Height="233" Margin="0,75,0,0" VerticalAlignment="Top" Width="456" RenderTransformOrigin="0.57,0.539" Source="/signalr.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,336,0,0" TextWrapping="Wrap" Text="User name.:" VerticalAlignment="Top" Width="134"/>
+            <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="72" Margin="0,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="456"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
